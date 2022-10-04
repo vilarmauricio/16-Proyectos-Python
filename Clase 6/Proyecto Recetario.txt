@@ -1,0 +1,22 @@
+Proyecto: Administrador de recetas.
+
+crear directorio de carpeta:
+Recetas: Carnes: (Entrecort al Malbec.txt, Matambre a la Pizza.txt)
+	 Ensaladas: (Ensalada Griega.txt, Ensalada Mediterranea.txt)
+	 Pastas: (Canelones de ESpinaca.txt, Ravioles de Ricotta.txt)
+	 Postres: (Compota de manzana.txt, Tarta de Frambueza.TXT)
+
+-Saludo de Bienvenida
+-Mostrar Directorio donde se encuetran las Recetas
+-Cantidad de REcetas disponibles
+
+Menu:
+[1] Leer Receta -> Elegir categoria -> Mostrar Recetas -> Elegir Receta - Leer Receta
+[2] Crear Receta -> Elegir Categoria -> Nombre Receta -> Contenido Receta
+[3] Crear Categoria -> Nombre Categoria -> Crear Carpeta
+[4] Eliminar Receta ->Idem Opcion 1 Pero Elimina
+[5] Eliminar Categoria -> Elimina Categoria
+[6] Finalizar Programa
+
+usar while para repetir menu
+usar system('cls') para limpiar pantalla

@@ -2,6 +2,7 @@
 import pygame
 import random
 import math
+from pygame import mixer
 
 
 # Inicializamos la libreria
@@ -16,8 +17,15 @@ pygame.display.set_caption('Invasión Espacial')
 icono = pygame.image.load('./images/cohete.png')
 pygame.display.set_icon(icono)
 
+
 #Creamos imagen fondo
 imagen_fondo = pygame.image.load('./images/Fondo.jpg')
+
+# Agregar musica
+mixer.music.load('./media/MusicaFondo.mp3')
+mixer.music.set_volume(0.1)
+mixer.music.play(-1)
+
 
 #Creamos jugador
 img_jugador = pygame.image.load('./images/nave.png')
@@ -56,6 +64,14 @@ bala_visible = False
 
 # Puntaje
 puntaje = 0
+fuente = pygame.font.Font('./fonts/GemunuLibre-Regular.ttf', 32)
+texto_x = 10
+texto_y = 10
+
+# Funcion mostrar puntaje
+def mostrar_puntaje(x, y):
+    texto = fuente.render(f"Puntaje: {puntaje}", True, (255, 255, 255))
+    pantalla.blit(texto, (x, y))
 
 
 # Funcion jugador y variables
@@ -109,6 +125,8 @@ while se_ejecuta:
                 movimiento_jugador_x = 1
 
             if evento.key == pygame.K_SPACE:
+                sonido_bala = mixer.Sound('./media/disparo.mp3')
+                sonido_bala.play()
                 if bala_visible == False:
                     bala_x = jugador_x
                     disparar_bala(bala_x, bala_y)
@@ -149,10 +167,11 @@ while se_ejecuta:
         colision = hay_colision(enemigo_x[e], enemigo_y[e], bala_x, bala_y)
 
         if colision:
+            sonido_colision = mixer.Sound('./media/Golpe.mp3')
+            sonido_colision.play()
             bala_y= 500
             bala_visible = False
             puntaje +=1
-            print(puntaje)
             enemigo_x[e] = random.randint(0,736) #centro eje x = ancho pantalla/2 - mitad de img_enemigo (800/2 - 64/2)
             enemigo_y[e] = random.randint(50,200) # Base de Y = tamaño de y - img_enemigo/2
 
@@ -172,6 +191,8 @@ while se_ejecuta:
 
     
     jugador(jugador_x, jugador_y)
+
+    mostrar_puntaje(texto_x, texto_y)
     
     # Referescamos pantalla
     pygame.display.update()

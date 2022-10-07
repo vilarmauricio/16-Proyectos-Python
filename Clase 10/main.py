@@ -68,6 +68,13 @@ fuente = pygame.font.Font('./fonts/GemunuLibre-Regular.ttf', 32)
 texto_x = 10
 texto_y = 10
 
+# texto final del juego
+fuente_final = pygame.font.Font('./fonts/GemunuLibre-Regular.ttf', 60)
+
+def texto_final():
+    mi_fuente_final = fuente_final.render("JUEGO TERMINADO", True, (255,255,255))
+    pantalla.blit(mi_fuente_final, (200, 200))
+
 # Funcion mostrar puntaje
 def mostrar_puntaje(x, y):
     texto = fuente.render(f"Puntaje: {puntaje}", True, (255, 255, 255))
@@ -151,6 +158,14 @@ while se_ejecuta:
 
     # Modificar ubicacion enemigo
     for e in range(cantidad_enemigos):
+
+        # Fin del juego
+        if enemigo_y[e] > 498:
+            for k in range(cantidad_enemigos):
+                enemigo_y[k] = 1000 #Valor exajerado para sacar al enemigo fuera de pantalla
+            texto_final()
+            break
+
         enemigo_x[e] += movimiento_enemigo_x[e]
 
         # mantener dentro del borde enemigo

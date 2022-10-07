@@ -27,14 +27,22 @@ jugador_x = 368 #centro eje x = ancho pantalla/2 - mitad de img_jugador (800/2 -
 jugador_y = 536 # Base de Y = tamaño de y - img_jugador/2
 movimiento_jugador_x = 0
 
-#Creamos enemigo
-img_enemigo = pygame.image.load('./images/enemigo.png')
+#Creamos enemigos (Probar hacerlo con clases)
 
-#Ubicacion inicial enemigo
-enemigo_x = random.randint(0,736) #centro eje x = ancho pantalla/2 - mitad de img_enemigo (800/2 - 64/2)
-enemigo_y = random.randint(50,200) # Base de Y = tamaño de y - img_enemigo/2
-movimiento_enemigo_x = 0.5
-movimiento_enemigo_y = 50
+img_enemigo = []
+enemigo_x = []
+enemigo_y = []
+movimiento_enemigo_x = []
+movimiento_enemigo_y = []
+cantidad_enemigos = 8
+
+for e in range(cantidad_enemigos):
+    img_enemigo.append(pygame.image.load('./images/enemigo.png'))
+    enemigo_x.append(random.randint(0,736)) #centro eje x = ancho pantalla/2 - mitad de img_enemigo (800/2 - 64/2)
+    enemigo_y.append(random.randint(50,200)) # Base de Y = tamaño de y - img_enemigo/2
+    movimiento_enemigo_x.append(0.5)
+    movimiento_enemigo_y.append(50)
+
 
 #Creamos bala
 img_bala = pygame.image.load('./images/bala.png')
@@ -55,8 +63,8 @@ def jugador(x, y):
     pantalla.blit(img_jugador, (x, y))
 
 # Funcion enemigo y variables
-def enemigo(x, y):
-    pantalla.blit(img_enemigo, (x, y))
+def enemigo(x, y, ene):
+    pantalla.blit(img_enemigo[ene], (x, y))
 
 #Funcion disparar Bala
 def disparar_bala(x,y):
@@ -124,17 +132,32 @@ while se_ejecuta:
 
 
     # Modificar ubicacion enemigo
-    enemigo_x += movimiento_enemigo_x
+    for e in range(cantidad_enemigos):
+        enemigo_x[e] += movimiento_enemigo_x[e]
 
-    # mantener dentro del borde enemigo
-    if enemigo_x <= 0:
-        movimiento_enemigo_x = 0.5
-        enemigo_y += movimiento_enemigo_y
-    
-    elif enemigo_x >= 736:
+        # mantener dentro del borde enemigo
+        if enemigo_x[e] <= 0:
+            movimiento_enemigo_x[e] = 0.5
+            enemigo_y[e] += movimiento_enemigo_y[e]
         
-        movimiento_enemigo_x = -0.5
-        enemigo_y += movimiento_enemigo_y
+        elif enemigo_x[e] >= 736:
+            
+            movimiento_enemigo_x[e] = -0.5
+            enemigo_y[e] += movimiento_enemigo_y[e]
+
+        # Colision
+        colision = hay_colision(enemigo_x[e], enemigo_y[e], bala_x, bala_y)
+
+        if colision:
+            bala_y= 500
+            bala_visible = False
+            puntaje +=1
+            print(puntaje)
+            enemigo_x[e] = random.randint(0,736) #centro eje x = ancho pantalla/2 - mitad de img_enemigo (800/2 - 64/2)
+            enemigo_y[e] = random.randint(50,200) # Base de Y = tamaño de y - img_enemigo/2
+
+        enemigo(enemigo_x[e], enemigo_y[e], e)
+
 
     # Movimiento Bala
     if bala_y <= -64:    #Tamaño bala
@@ -147,20 +170,8 @@ while se_ejecuta:
         disparar_bala(bala_x, bala_y)
         bala_y -= movimiento_bala_y
 
-    # Colision
-    colision = hay_colision(enemigo_x, enemigo_y, bala_x, bala_y)
-
-    if colision:
-        bala_y= 500
-        bala_visible = False
-        puntaje +=1
-        print(puntaje)
-        enemigo_x = random.randint(0,736) #centro eje x = ancho pantalla/2 - mitad de img_enemigo (800/2 - 64/2)
-        enemigo_y = random.randint(50,200) # Base de Y = tamaño de y - img_enemigo/2
-
-
-
+    
     jugador(jugador_x, jugador_y)
-    enemigo(enemigo_x, enemigo_y)
-
+    
+    # Referescamos pantalla
     pygame.display.update()

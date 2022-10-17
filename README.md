@@ -40,6 +40,48 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
   Programa en el cual es posible crear/eliminar archivos '.txt' y carpetas de 'categorías' con la información de recetas de cocina o través de la navegación por diferentes menús.
   
   Se introduce concepto de manejo de **archivos** y **directorios**
+  
+- Clase 7 (Intermedio) - Cuenta Bancaria
+
+  Manejo de saldo de cuenta bancaria, en la cual tendremos información de nombre y apellido del cliente, número de cuenta y balance. Se introducirán valores iniciales y se podrá ir agregando y restando saldo de la cuenta.
+  
+  Se introduce el concepto de **CLASES**
+  
+- Clase 8 (Intermedio) - Consola de Turnos para Farmacia:
+
+  Creación de turnos para poder ser atendido en una farmacia la cual cuenta con tres (3) secciones 'Perfumería', 'Farmacia' y 'Cosméticos', se generan números individuales para cada sección.
+  
+  Se introduce conceptos de **generadores**, **decoradores** y creación de librerías propias.
+  
+- Clase 10 (Avanzado) - Juego Invasión Espacial:
+
+  Juego 2D en el cual se maneja una nave y se deben derribar las naves invasoras.
+  
+  Manejo de librería **Pygame**. Se Crea Interfaz gráfica. 
+  
+  Controles: Movimiento: Flechas izquierda y derecha.
+             Disparos: Barra Espaciadora. 
+             
+- Clase 11 (Avanzado) - Extractor de Datos Web:
+
+  Extracción de información de libros de la página 'http://books.toscrape.com', se realizó la búsqueda de libros con puntaje de 4 y estrellas, se genera un archivo CSV con el listado de los nombres de estos libros.
+  
+  Se utilizo librerías **BeautifulSoup** para manejo y comprensión de código HTML y librería **requests** para la conexión a páginas web. 
+  Se realizó introducción a conceptos de estructuras **HTML** y **CSS**
+  
+- Clase 12 (Avanzado) - Gestor de Restaurante:
+  
+    Consola grafica en la cual se puede seleccionar los diferentes ítems de consumo de un restaurante, colocar cantidades. Se mostrará los costos agrupados por categorías y totales a cobrar. Se puede hacer la creación de un recibo y guardarlo en un archivo. 
+    También posee una calculadora para realización de cálculos simples.
+    
+    Se utilizo librería **Tkinter**
+
+    
+    
+    
+  
+  
+ 
 
   
   

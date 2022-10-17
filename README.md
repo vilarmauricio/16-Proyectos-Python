@@ -110,6 +110,20 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
   Se creó una página web con templates de 'Login', 'Creación de Usuario', 'Tareas Pendientes del Usuario', 'Crear Tarea', 'Editar Tarea', 'Eliminar Tarea'.
   
   Se utilizo librería **Django**, manejo de **HTML** y **CSS**.
+
+  ![Imagen Proyecto 16 login](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_login.jpg)
+
+  ![Imagen Proyecto 16 Registro](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_registro.jpg)
+  
+  ![Imagen Proyecto 16 lista tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_listas_tareas.jpg)
+
+  ![Imagen Proyecto 16 nueva tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_nueva_tarea.jpg)
+
+  ![Imagen Proyecto 16 editar_tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_editar_tarea.jpg)
+
+  ![Imagen Proyecto 16 eliminar_tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_eliminar_tarea.jpg)
+
+  
     
     
     

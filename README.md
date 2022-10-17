@@ -76,6 +76,11 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
     
     Se utilizo librería **Tkinter**
 
+- Clase 15 (Avanzado) - Machine Learning:
+
+  Se realizaron practicas utilizando jupyter notebook con las librerias **Pandas**, **Numpy**, **Matplotlib** y **SKlearn**
+  
+- Clase 16 (Avanzado) - Ges
     
     
     

@@ -7,6 +7,9 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
   
   Se utilizo las funciones **print** e **input**
   
+  ![Imagen Proyecto 1](imagenes/Captura proyecto1.jpg)
+ 
+  
 - Clase 2 (Básico) - Calculador de Comisiones:
   
   Programa para calcular la comisión sobre las ventas que le corresponde a un vendedor.

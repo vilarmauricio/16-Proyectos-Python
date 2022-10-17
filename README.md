@@ -115,7 +115,7 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
 
   ![Imagen Proyecto 16 Registro](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_registro.jpg)
   
-  ![Imagen Proyecto 16 lista tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_listas_tareas.jpg)
+  ![Imagen Proyecto 16 lista tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_lista_tareas.jpg)
 
   ![Imagen Proyecto 16 nueva tarea](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto16_nueva_tarea.jpg)
 

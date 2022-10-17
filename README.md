@@ -78,9 +78,13 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
 
 - Clase 15 (Avanzado) - Machine Learning:
 
-  Se realizaron practicas utilizando jupyter notebook con las librerias **Pandas**, **Numpy**, **Matplotlib** y **SKlearn**
+  Se realizaron practicas utilizando jupyter notebook con las librerías **Pandas**, **Numpy**, **Matplotlib** y **SKlearn**
   
-- Clase 16 (Avanzado) - Ges
+- Clase 16 (Avanzado) - Aplicación Web de Tareas Pendientes:
+
+  Se creó una página web con templates de 'Login', 'Creación de Usuario', 'Tareas Pendientes del Usuario', 'Crear Tarea', 'Editar Tarea', 'Eliminar Tarea'.
+  
+  Se utilizo librería **Django**, manejo de **HTML** y **CSS**.
     
     
     

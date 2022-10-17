@@ -10,7 +10,7 @@
 # print(num4+int(num3))
 # print(num3+float(num4))
 
-nombre = input('Hola! Dime tu nombre: ')
+nombre = input('\nHola! Dime tu nombre: ')
 ventas = float(input('¿Cual fue el importe de tus ventas?: '))
 
-print(f'Ok, {nombre} tus comisiones son ${(ventas*13)/100}')
+print(f'\nOk, {nombre} tus comisiones son ${(ventas*13)/100}\n')

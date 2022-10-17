@@ -7,7 +7,7 @@ Curso de Udemy para aprender Python en los cuales se realizan 16 proyectos en lo
   
   Se utilizo las funciones **print** e **input**
   
-  ![Imagen Proyecto 1](imagenes/Captura proyecto1.jpg)
+  ![Imagen Proyecto 1](https://github.com/vilarmauricio/16-Proyectos-Python/blob/main/imagenes/Captura%20proyecto1.jpg)
  
   
 - Clase 2 (Básico) - Calculador de Comisiones:
